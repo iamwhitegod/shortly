@@ -1,0 +1,91 @@
+@import "./index.scss";
+
+.app {
+  &__row {
+    max-width: 114rem;
+    margin: 0 auto;
+  }
+
+  &__navigation {
+    nav {
+      display: flex;
+      align-items: center;
+      padding: 3.2rem 0;
+    }
+
+    nav figure {
+      flex-shrink: 0;
+    }
+
+    nav > *:not(:last-child) {
+      margin-right: 2.4rem;
+    }
+
+    nav ul {
+      flex-grow: 1;
+      flex-shrink: 1;
+      display: flex;
+      list-style: none;
+    }
+
+    ul a {
+      color: var(--color-grayish-violet);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--color-very-dark-blue);
+    }
+
+    nav ul > *:not(:last-child) {
+      margin-right: 2.4rem;
+    }
+
+    &--link {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+
+      & > * {
+        @include respond(phone-lg) {
+          flex-direction: column;
+        }
+      }
+
+      @include respond(phone-lg) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__btns {
+    @include respond(phone-lg) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    button {
+      outline: none;
+      border: none;
+      font-size: inherit;
+      font-family: inherit;
+      padding: 1.2rem 2.4rem;
+      color: var(--color-grayish-violet);
+      border-radius: 3rem;
+      background-color: var(--color-white);
+      cursor: pointer;
+      transition: all 0.6s;
+    }
+
+    button.active,
+    button:hover {
+      background-color: var(--color-cyan);
+      color: var(--color-white);
+    }
+
+    & > *:not(:last-child) {
+      margin-right: 2.4rem;
+    }
+  }
+}
