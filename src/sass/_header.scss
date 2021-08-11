@@ -1,0 +1,15 @@
+.header {
+  &__content {
+    grid-column: 2 / 8;
+    grid-row: 2 / 3;
+    align-self: center;
+  }
+
+  &__illustration {
+    grid-column: 8 / -1;
+    grid-row: 2 / 3;
+    align-self: center;
+
+    transform: translateX(8rem);
+  }
+}

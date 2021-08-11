@@ -1,0 +1,47 @@
+.nav {
+  grid-column: 2 / -2;
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: 12rem auto max-content;
+    grid-gap: 2.4rem;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 100%;
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-grow: 1;
+
+    & > *:not(:last-child) {
+      margin-right: 2.4rem;
+    }
+  }
+
+  &__item {
+    a {
+      text-decoration: none;
+      color: var(--color-grayish-violet);
+      transition: all 0.25s;
+
+      &:hover {
+        color: var(--color-dark-violet);
+      }
+    }
+  }
+
+  &__btns {
+    & > *:not(:last-child) {
+      margin-right: 2.4rem;
+    }
+  }
+}

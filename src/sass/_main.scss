@@ -1,0 +1,10 @@
+.main {
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+
+  display: grid;
+  grid-template-columns: 1fr repeat(12, minmax(min-content, 8.5rem)) 1fr;
+  grid-row-gap: 10.4rem;
+  background-color: hsl(225, 33.3%, 95.3%);
+  margin-top: 10.4rem;
+}

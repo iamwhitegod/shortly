@@ -1,0 +1,35 @@
+%headings {
+  font-weight: 700;
+  color: var(--color-dark-violet);
+}
+
+%desc {
+  color: var(--color-grayish-violet);
+}
+
+.heading {
+  @extend %headings;
+
+  &--primary {
+    font-size: 6.4rem;
+    line-height: 125%;
+  }
+
+  &--secondary {
+    font-size: 2.8rem;
+  }
+
+  &--tertiary {
+    font-size: 1.8rem;
+  }
+}
+
+.desc {
+  @extend %desc;
+  font-size: 2rem;
+  margin-bottom: 3.2rem;
+
+  &--secondary {
+    font-size: 1.6rem;
+  }
+}

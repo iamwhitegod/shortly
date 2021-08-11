@@ -1,0 +1,62 @@
+@mixin respond($breakpoint) {
+  @if ($breakpoint == mobile-xs) {
+    @media only screen and (max-width: 320px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == mobile-sm) {
+    @media only screen and (max-width: 375px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == mobile-md) {
+    @media only screen and (max-width: 411px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == mobile-lg) {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == tablet-pt) {
+    @media only screen and (max-width: 900px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == tablet-ld) {
+    @media only screen and (max-width: 1024px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == laptop) {
+    @media only screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == high-des) {
+    @media only screen and (min-width: 1366px) {
+      @content;
+    }
+  }
+}
+
+/*
+
+    Mobile: 360 x 640
+    Mobile: 375 x 667
+    Mobile: 360 x 720
+    iPhone X: 375 x 812
+    Pixel 2: 411 x 731
+    Tablet: 768 x 1024
+    Laptop: 1366 x 768
+    High-res laptop or desktop: 1920 x 1080
+
+*/

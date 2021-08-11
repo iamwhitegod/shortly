@@ -1,0 +1,40 @@
+.btn {
+  outline: none;
+  border: none;
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: 500;
+  background-color: #fff;
+  color: var(--color-grayish-violet);
+  padding: 1rem 2.8rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: all 0.25s;
+
+  &:hover {
+    color: #fff;
+    background-color: var(--color-cyan);
+  }
+
+  &--active {
+    color: #fff;
+    background-color: var(--color-cyan);
+  }
+
+  &--radius {
+    border-radius: 0.6rem;
+    color: #fff;
+    background-color: var(--color-cyan);
+  }
+
+  &--dark {
+    border-radius: 0.6rem;
+    color: #fff;
+    background-color: var(--color-violet);
+
+    &:hover {
+      color: #fff;
+      background-color: var(--color-violet);
+    }
+  }
+}
