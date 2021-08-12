@@ -3,15 +3,15 @@
   grid-row: 4 / 5;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   grid-template-rows: repeat(2, min-content);
-  grid-gap: 6.4rem 3.2rem;
+  align-items: center;
+  grid-gap: 0rem 3.2rem;
   margin-bottom: 10.4rem;
 
   &__caption {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
-
     justify-self: center;
     text-align: center;
 
@@ -25,6 +25,20 @@
     background-color: #fff;
     padding: 3.2rem;
     border-radius: 0.6rem;
+    position: relative;
+    z-index: 2;
+
+    &--1 {
+      margin-top: 0;
+    }
+
+    &--2 {
+      margin-top: 8rem;
+    }
+
+    &--3 {
+      margin-top: 16rem;
+    }
 
     .desc {
       font-size: 1.4rem;
@@ -51,5 +65,14 @@
     .desc {
       margin-bottom: 2.4rem;
     }
+  }
+
+  &__bar {
+    grid-column: 1 / -1;
+    background-color: var(--color-cyan);
+    margin: -40rem 2.4rem 0 2.4rem;
+    height: 0.8rem;
+    position: relative;
+    z-index: 1;
   }
 }

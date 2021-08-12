@@ -1,6 +1,92 @@
 .footer {
-  grid-column: 2 / -2;
+  grid-column: 1 / -1;
   grid-row: -1 / -2;
 
-  background-color: navy;
+  display: grid;
+  grid-template-columns:
+    minmax(6rem, 1fr) repeat(12, minmax(min-content, 8.5rem))
+    minmax(6rem, 1fr);
+  background-color: var(--color-dark-violet);
+  padding: 9.6rem 0;
+
+  &__logo {
+    grid-column: 2 / span 3;
+    max-width: 9.6rem;
+
+    &--white {
+      width: 100%;
+      height: 3.2rem;
+    }
+  }
+
+  &__list {
+    list-style: none;
+
+    .heading--quad {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 2.4rem;
+    }
+
+    &--1 {
+      grid-column: 6 / 8;
+    }
+
+    &--2 {
+      grid-column: 8 / 10;
+    }
+
+    &--3 {
+      grid-column: 10 / 12;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 0.6rem;
+    }
+
+    & > a {
+      color: hsl(255, 100%, 97%);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--color-cyan);
+      }
+    }
+  }
+
+  &__socials {
+    grid-column: -4 / span 2;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-top: 0.4rem;
+
+    &--facebook,
+    &--twitter,
+    &--pinterest,
+    &--instagram {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+  }
+}
+
+#logo > path:nth-child(1) {
+  fill: #fff;
+}
+
+#icon-facebook:hover > path,
+#icon-twitter:hover > path,
+#icon-pinterest:hover > path,
+#icon-instagram:hover > path {
+  fill: var(--color-cyan);
 }

@@ -1,6 +1,8 @@
 .app {
   display: grid;
-  grid-template-rows: 8rem calc(90vh - 7.5rem) min-content repeat(2, 15rem);
-  grid-template-columns: 1fr repeat(12, minmax(min-content, 8.5rem)) 1fr;
+  grid-template-rows: 8rem calc(90vh - 7.5rem) repeat(3, min-content);
+  grid-template-columns:
+    minmax(6rem, 1fr) repeat(12, minmax(min-content, 8.5rem))
+    minmax(6rem, 1fr);
   overflow: hidden;
 }

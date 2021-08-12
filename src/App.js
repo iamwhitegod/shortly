@@ -6,7 +6,7 @@ import Main from "./components/Main";
 import Cta from "./components/Cta";
 import Footer from "./components/Footer";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   return (

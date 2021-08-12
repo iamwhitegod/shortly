@@ -25,15 +25,19 @@ function Main() {
         thing. Branded link helps instill confidence in your content."
         />
         <StatCard
+          classname="stat__card--2"
           icon={iconDr}
           heading="Detailed Records"
           description="Gain insights into who is clicking your clicks. Know when and where people engage with your content helps inform better desicion."
         />
         <StatCard
+          classname="stat__card--3"
           icon={iconFc}
           heading="Fully Customizable"
           description="Improve your brand awareness and content discoverability through customizable links, supercharging audience engagement."
         />
+
+        <div className="stat__bar"></div>
       </StatSection>
     </main>
   );

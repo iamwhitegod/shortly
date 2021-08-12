@@ -1,8 +1,8 @@
 import React from "react";
 
-function StatCard({ icon, heading, description }) {
+function StatCard({ classname, icon, heading, description }) {
   return (
-    <div className="stat__card">
+    <div className={`stat__card ${classname ? classname : ""}`}>
       <span className="stat__card--icon">
         <img src={icon} alt="card icon" />
       </span>
