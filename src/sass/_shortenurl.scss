@@ -16,6 +16,19 @@
     border-radius: 0.6rem;
     padding: 4.8rem 6.4rem;
     margin-top: -27.4rem;
+
+    @include respond(mobile-lg) {
+      background-image: url("../assets/bg-shorten-mobile.svg");
+      background-size: contain;
+      background-position: right;
+      background-position-x: right;
+      background-position-y: -4.8rem;
+      padding: 2.4rem 4.8rem;
+    }
+
+    @include respond(mobile-md) {
+      padding: 2.4rem;
+    }
   }
 
   &__form-group {
@@ -23,6 +36,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include respond(mobile-lg) {
+      flex-direction: column;
+    }
 
     input {
       font-size: inherit;
@@ -38,6 +55,20 @@
       &::placeholder {
         color: var(--color-grayish-violet);
       }
+
+      @include respond(mobile-lg) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 2rem;
+      }
+    }
+
+    button {
+      flex-shrink: 0;
+
+      @include respond(mobile-lg) {
+        width: 100%;
+      }
     }
   }
 
@@ -49,12 +80,60 @@
     border-radius: 0.6rem;
     padding: 1.2rem 2.4rem;
 
+    @include respond(mobile-lg) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2.4rem;
+    }
+
+    p {
+      color: var(--color-violet);
+
+      @include respond(tablet-port) {
+        margin: 0;
+      }
+
+      @include respond(mobile-lg) {
+        margin-bottom: 1.2rem;
+      }
+    }
+
+    & > p,
+    & > p::after {
+      @include respond(mobile-lg) {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+
+    & > p::after {
+      @include respond(mobile-lg) {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: hsl(0, 0%, 90.2%);
+        margin-top: 1.2rem;
+      }
+    }
+
     &--short {
       display: flex;
       align-items: center;
 
       & > *:not(:last-child) {
         margin-right: 2.4rem;
+      }
+
+      @include respond(mobile-lg) {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+
+        & > * {
+          max-width: 100%;
+          width: 100%;
+        }
       }
 
       .desc {

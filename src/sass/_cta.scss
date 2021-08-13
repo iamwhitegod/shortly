@@ -15,6 +15,10 @@
   padding: 6.4rem 0;
   // text-align: center;
 
+  @include respond(tablet-port) {
+    grid-row: 5 / 6;
+  }
+
   .heading {
     color: #fff;
     margin-bottom: 1.2rem;

@@ -9,40 +9,113 @@
   background-color: var(--color-dark-violet);
   padding: 9.6rem 0;
 
+  @include respond(tablet-port) {
+    grid-row: -2 / -1;
+
+    grid-template-columns:
+      4rem repeat(6, minmax(min-content, 1fr))
+      4rem;
+    grid-template-rows: repeat(3, min-content);
+    padding: 6.4rem 0;
+  }
+
+  @include respond(mobile-md) {
+    grid-template-rows: repeat(5, min-content);
+  }
+
   &__logo {
     grid-column: 2 / span 3;
+    grid-row: 1 / 2;
     max-width: 9.6rem;
+
+    @include respond(tablet-port) {
+      grid-column: 2 / -2;
+      justify-self: center;
+      max-width: 14rem;
+      margin-bottom: 2.4rem;
+    }
 
     &--white {
       width: 100%;
       height: 3.2rem;
+
+      @include respond(tablet-port) {
+        height: 5.2rem;
+      }
     }
   }
 
   &__list {
     list-style: none;
 
+    @include respond(tablet-port) {
+      grid-row: 2 / 3;
+      justify-self: center;
+      margin-bottom: 2.4rem;
+    }
+
+    @include respond(mobile-md) {
+      margin-bottom: 4.8rem;
+    }
+
     .heading--quad {
       font-size: 1.8rem;
       font-weight: 500;
       color: #fff;
       margin-bottom: 2.4rem;
+
+      @include respond(mobile-md) {
+        margin-bottom: 1.2rem;
+        text-align: center;
+      }
     }
 
     &--1 {
       grid-column: 6 / 8;
+
+      @include respond(tablet-port) {
+        grid-column: 2 / span 2;
+      }
+
+      @include respond(mobile-md) {
+        grid-row: 2 / 3;
+      }
     }
 
     &--2 {
       grid-column: 8 / 10;
+
+      @include respond(tablet-port) {
+        grid-column: 4 / span 2;
+      }
+
+      @include respond(mobile-md) {
+        grid-row: 3 / 4;
+      }
     }
 
     &--3 {
       grid-column: 10 / 12;
+
+      @include respond(tablet-port) {
+        grid-column: 6 / span 2;
+      }
+
+      @include respond(mobile-md) {
+        grid-row: 4 / 5;
+      }
+    }
+
+    @include respond(mobile-md) {
+      grid-column: 2 / -2;
     }
   }
 
   &__item {
+    @include respond(mobile-md) {
+      text-align: center;
+    }
+
     &:not(:last-child) {
       margin-bottom: 0.6rem;
     }
@@ -58,16 +131,32 @@
   }
 
   &__socials {
-    grid-column: -4 / span 2;
-
+    grid-column: -4 / -2;
     display: flex;
     justify-content: space-between;
+
+    @include respond(tablet-port) {
+      grid-column: 2 / -2;
+      grid-row: -2 / -1;
+
+      justify-content: center;
+    }
+
+    & > *:not(:last-child) {
+      @include respond(tablet-port) {
+        margin-right: 2.4rem;
+      }
+    }
   }
 
   &__icon {
     width: 2.4rem;
     height: 2.4rem;
     margin-top: 0.4rem;
+
+    @include respond(tablet-port) {
+      margin-top: 0;
+    }
 
     &--facebook,
     &--twitter,

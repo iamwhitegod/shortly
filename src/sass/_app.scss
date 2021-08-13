@@ -5,4 +5,32 @@
     minmax(6rem, 1fr) repeat(12, minmax(min-content, 8.5rem))
     minmax(6rem, 1fr);
   overflow: hidden;
+
+  @include respond(laptop) {
+    grid-template-rows: 8rem calc(80vh - 7.5rem) repeat(3, min-content);
+    grid-template-columns:
+      6rem repeat(8, minmax(min-content, 1fr))
+      6rem;
+  }
+
+  @include respond(maxheight) {
+    grid-template-rows: 8rem 37rem repeat(3, min-content);
+  }
+
+  @include respond(minheight) {
+    grid-template-rows: 8rem 45.8rem repeat(3, min-content);
+  }
+
+  @include respond(tablet-port) {
+    grid-template-rows: 8rem repeat(5, min-content);
+    grid-template-columns:
+      4rem repeat(6, minmax(min-content, 1fr))
+      4rem;
+  }
+
+  @include respond(mobile-md) {
+    grid-template-columns:
+      2rem repeat(6, minmax(min-content, 1fr))
+      2rem;
+  }
 }

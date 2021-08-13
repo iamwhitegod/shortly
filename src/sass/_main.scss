@@ -9,4 +9,23 @@
   grid-row-gap: 10.4rem;
   background-color: hsl(225, 33.3%, 95.3%);
   margin-top: 10.4rem;
+
+  @include respond(laptop) {
+    grid-template-columns:
+      6rem repeat(8, minmax(min-content, 1fr))
+      6rem;
+  }
+
+  @include respond(tablet-port) {
+    grid-row: 4 / 5;
+    grid-template-columns:
+      4rem repeat(6, minmax(min-content, 1fr))
+      4rem;
+  }
+
+  @include respond(mobile-md) {
+    grid-template-columns:
+      2rem repeat(6, minmax(min-content, 1fr))
+      2rem;
+  }
 }

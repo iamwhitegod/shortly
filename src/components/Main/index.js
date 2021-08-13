@@ -19,6 +19,7 @@ function Main() {
         statistics board"
         />
         <StatCard
+          classname="stat__card--1"
           icon={iconBr}
           heading="Brand Recognition"
           description="Boost your brand recognition with each click. Generic link don't mean a

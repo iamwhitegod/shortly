@@ -23,14 +23,32 @@
     }
   }
 
-  @if ($breakpoint == tablet-pt) {
-    @media only screen and (max-width: 900px) {
+  @if ($breakpoint == heading) {
+    @media only screen and (max-width: 840px) and (min-width: 563px) {
       @content;
     }
   }
 
-  @if ($breakpoint == tablet-ld) {
-    @media only screen and (max-width: 1024px) {
+  @if ($breakpoint == tablet-port) {
+    @media only screen and (max-width: 840px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == maxheight) {
+    @media only screen and (max-height: 500px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == minheight) {
+    @media only screen and (min-height: 600px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == tablet) {
+    @media only screen and (max-width: 960px) {
       @content;
     }
   }
@@ -41,11 +59,11 @@
     }
   }
 
-  @if ($breakpoint == high-des) {
-    @media only screen and (min-width: 1366px) {
-      @content;
-    }
-  }
+  // @if ($breakpoint == high-des) {
+  //   @media only screen and (min-width: 1366px) {
+  //     @content;
+  //   }
+  // }
 }
 
 /*
