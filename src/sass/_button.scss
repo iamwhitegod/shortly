@@ -11,6 +11,11 @@
   cursor: pointer;
   transition: all 0.25s;
 
+  @include respond(tablet-port) {
+    color: #fff;
+    background-color: transparent;
+  }
+
   &:hover {
     color: #fff;
     background-color: var(--color-cyan);

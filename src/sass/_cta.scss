@@ -8,6 +8,11 @@
   background-repeat: no-repeat;
   background-position: center;
 
+  @include respond(mobile-md) {
+    background-image: url("../assets/bg-boost-mobile.svg");
+    background-position: right;
+  }
+
   display: flex;
   flex-direction: column;
   align-items: center;
