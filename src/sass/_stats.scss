@@ -7,6 +7,7 @@
   grid-template-rows: repeat(2, min-content);
   align-items: center;
   grid-gap: 0rem 3.2rem;
+  margin-top: 7.2rem;
   margin-bottom: 10.4rem;
 
   @include respond(tablet-port) {
@@ -43,7 +44,6 @@
 
     &--1 {
       margin-top: 0;
-
       @include respond(tablet-port) {
         margin-top: 8rem;
       }
@@ -55,7 +55,6 @@
 
     &--3 {
       margin-top: 16rem;
-
       @include respond(tablet-port) {
         margin-top: 8rem;
       }
@@ -65,7 +64,6 @@
       font-size: 1.4rem;
       line-height: 150%;
       margin-bottom: 2.4rem;
-
       @include respond(tablet-port) {
         max-width: 100%;
         margin-bottom: 0;
@@ -104,7 +102,6 @@
 
     @include respond(tablet-port) {
       transform: rotate(90deg);
-
       width: 90%;
       margin: 0;
       left: 5%;

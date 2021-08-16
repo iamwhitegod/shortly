@@ -22,7 +22,7 @@ function Nav() {
         <img src={logo} alt="brand logo" />
       </div>
 
-      <div className="nav__menu-wrapper">
+      <div className="nav__menu-wrapper hidden">
         <ul className="nav__list">
           <li className="nav__item">
             <Link to="#">Features</Link>

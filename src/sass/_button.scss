@@ -30,6 +30,9 @@
     border-radius: 0.6rem;
     color: #fff;
     background-color: var(--color-cyan);
+    &:hover {
+      background-color: var(--color-cyan-light);
+    }
   }
 
   &--dark {
@@ -41,5 +44,30 @@
       color: #fff;
       background-color: var(--color-violet);
     }
+  }
+
+  &--loading {
+    display: block;
+    border: 1px dotted #ffffff;
+    border-image-source: 1;
+    border-width: 0.5rem;
+    border-top-color: #ffffff00;
+    border-left-width: 0.5rem;
+    border-bottom-width: 0.5rem;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 auto;
+    animation: loadingspin 0.8s linear infinite;
+  }
+
+  &--icon {
+    line-height: 0;
+    font-size: 1.8rem;
+    padding: 1rem;
+  }
+
+  &--disabled {
+    background-color: var(--color-cyan-light);
   }
 }
