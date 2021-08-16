@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import Button from "../Button";
 
 function ShortenUrl() {
@@ -43,6 +43,7 @@ function ShortenUrl() {
       .then((data) => {
         // Checks if data.ok is true or false
         if (!data.ok) throw new Error(data.error);
+        localStorage.setItem("data", { data });
 
         setUrls((urls) => [data, ...urls]);
         setInput("");
