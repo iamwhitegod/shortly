@@ -2,7 +2,9 @@ import React, { useRef, useState } from "react";
 import Button from "../Button";
 
 function ShortenUrl() {
-  const [urls, setUrls] = useState([]);
+  const [urls, setUrls] = useState([
+    ...(JSON.parse(localStorage.getItem("data")) || []),
+  ]);
   const [input, setInput] = useState("");
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("Please add a link");
@@ -43,20 +45,25 @@ function ShortenUrl() {
       .then((data) => {
         // Checks if data.ok is true or false
         if (!data.ok) throw new Error(data.error);
-        localStorage.setItem("data", { data });
+        localStorage.setItem("data", JSON.stringify([data, ...urls]));
 
         setUrls((urls) => [data, ...urls]);
         setInput("");
         setError(false);
         setProcessing(false);
-
-        console.log(urls);
       })
       .catch((err) => {
         displayErrors(true, err.message.split(",")[0]);
         setProcessing(false);
       });
   };
+
+  // useEffect(() => {
+  //   const data = [...JSON.parse(localStorage.getItem("data"))];
+  //   return () => {
+  //     console.log("Cleanup completed");
+  //   };
+  // }, [urls]);
 
   return (
     <section className="shorten-url">
